@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizzes | CLASS HUB</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/grades.css">
+</head>
+
+<body>
+    <div class="app" id="app">
+
+        <!-- ================= TOPBAR ================= -->
+        <header class="topbar">
+            <button id="menu-toggle" class="menu-btn" aria-label="Toggle menu">
+                ☰
+            </button>
+
+            <div class="university-brand">
+                <img src="photo/logo.jpg" alt="University Logo">
+                <span>CLASS HUB</span>
+            </div>
+
+            <div class="profile-container">
+    <button id="profileBtn" class="profile-btn" aria-label="Profile">
+        <img src="photo/profile.jpg" alt="Profile">
+    </button>
+    <div id="profileMenu" class="profile-menu">
+        <button id="darkModeBtn">🌙</button>
+        <button id="logoutBtn">Sign Out</button>
+    </div>
+</div>
+        </header>
+
+        <!-- ================= SHELL ================= -->
+        <div class="shell">
+
+            <aside class="sidebar">
+                <nav>
+                    <a href="dashboard.html">
+                        <span class="nav-icon"></span>
+                        Dashboard
+                    </a>
+                    <a href="Student.html">
+                        <span class="nav-icon"></span>
+                        Students
+                    </a>
+                    <a href="exams.html">
+                        <span class="nav-icon"></span>
+                        Exams
+                    </a>
+                    <a href="quizzes.html" class="current">
+                        <span class="nav-icon"></span>
+                        Quizzes
+                    </a>
+                    <a href="assigment.html">
+                        <span class="nav-icon"></span>
+                        Assignments
+                    </a>
+                    <a href="atend.html">
+                        <span class="nav-icon"></span>
+                        Attendance
+                    </a>
+                </nav>
+            </aside>
+
+            <main class="content">
+                <div class="page-head">
+                    <h1>Quizzes</h1>
+                    <button id="toggle-quiz-form-btn" class="btn primary">
+                        + Create New Quiz
+                    </button>
+                </div>
+
+                <!-- ================= FORM PANEL ================= -->
+                <div id="quiz-form-container" class="panel form-panel hidden">
+                    <form id="quiz-form">
+                        <input type="hidden" id="editing-quiz-id">
+
+                        <label for="quiz-title-input">Quiz Title</label>
+                        <input type="text" id="quiz-title-input" placeholder="e.g., HTML Basics" required>
+
+                        <div id="questions-container"></div>
+
+                        <div class="form-actions">
+                            <button type="button" id="add-question-btn" class="btn">
+                                + Add Question
+                            </button>
+                            <div class="form-actions-right">
+                                <button type="button" id="cancel-quiz-btn" class="btn">
+                                    Cancel
+                                </button>
+                                <button type="submit" class="btn primary">
+                                    Save Quiz
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- ================= TABLE ================= -->
+                <section class="panel">
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="width: 60px;">#</th>
+                                    <th>Quiz Title</th>
+                                    <th style="width: 160px;">Total Questions</th>
+                                    <th style="width: 130px;">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="quiz-tbody"></tbody>
+                        </table>
+                        <p id="empty" class="empty" hidden>No quizzes to show.</p>
+                    </div>
+                    <div class="panel-foot">
+                        <span class="muted" id="quiz-count">Showing 0 quizzes</span>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+    </div>
+    <script src="js/profile-menu.js"></script> 
+    <script src="js/quizzes.js"></script>
+    <script src="js/dark.js"></script>
+</body>
+</html> 

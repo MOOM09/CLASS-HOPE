@@ -1,0 +1,114 @@
+/* 
+   ملف home.css
+   هذا الملف مخصص لتنسيق العناصر الموجودة في الصفحة الرئيسية (HOME.html) 
+*/
+
+html::-webkit-scrollbar, 
+body::-webkit-scrollbar {
+  display: none; /* لمتصفحات كروم، وسافاري، وأوبرا */
+}
+
+/* الحاوية الرئيسية لقسم الـ Hero لتقسيم الشاشة إلى نصفين */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    /* يأخذ المساحة المتبقية من الشاشة أسفل الـ Navbar */
+    min-height: calc(100vh - 100px); 
+    padding: 2rem 5%;
+}
+
+/* الجزء الأيسر الذي يحتوي على النصوص */
+.hero-content {
+    flex: 1;
+}
+
+/* العنوان الصغير فوق العنوان الرئيسي */
+.hero-small-title {
+    font-size: 0.85rem;
+    font-weight: bold;
+    letter-spacing: 2px; /* تباعد بين الأحرف */
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* العنوان الرئيسي الكبير (من التصميم المرفق) */
+.hero-content h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+/* النص الوصفي تحت العنوان */
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 80%;
+}
+
+/* الجزء الأيمن الذي يحتوي على الصورة */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* تنسيق الصورة لتكون متجاوبة وذات حواف ناعمة */
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 24px;
+    /* ظل خفيف لإبراز الصورة كما في التصاميم الحديثة */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08); 
+}
+
+/* 
+   ملاحظة: زر تسجيل الدخول غير موجود في قسم hero-content في الـ HTML الخاص بك 
+   (موجود فقط في الـ Navbar)، لذلك لم يتم إضافة تنسيق لزر هنا بناءً على طلبك بالالتزام بالموجود فقط.
+*/
+
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        min-height: auto;
+        padding: 3rem 5%;
+        text-align: center;
+        gap: 2.5rem;
+    }
+    .hero-content h1 {
+        font-size: 2.6rem;
+    }
+    .hero-description {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+    .hero-image {
+        justify-content: center;
+        width: 100%;
+    }
+    .hero-image img {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 2rem 5%;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    .hero-small-title {
+        font-size: 0.75rem;
+        letter-spacing: 1.5px;
+    }
+    .hero-description {
+        font-size: 1rem;
+    }
+    .hero-image img {
+        max-width: 100%;
+        border-radius: 16px;
+    }
+}

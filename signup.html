@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up | ClassHub</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+
+    <div class="auth-layout">
+
+        <!-- ============ LEFT: FORM ============ -->
+        <div class="auth-form-side">
+
+            <div class="auth-brand">
+                <img src="photo/logo.jpg" alt="ClassHub Logo">
+                <span>ClassHub</span>
+            </div>
+
+            <div class="auth-form-wrapper">
+
+                <h1 class="auth-title">Create your account</h1>
+                <p class="auth-subtitle">Start managing your classroom in minutes.</p>
+
+                <form id="signupForm">
+
+                    <label for="firstName">First Name</label>
+                    <input
+                        type="text"
+                        id="firstName"
+                        name="firstName"
+                        placeholder="Enter your first name"
+                        required
+                    >
+
+                    <label for="lastName">Last Name</label>
+                    <input
+                        type="text"
+                        id="lastName"
+                        name="lastName"
+                        placeholder="Enter your last name"
+                        required
+                    >
+
+                    <label for="signupEmail">Email address</label>
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        name="email"
+                        placeholder="you@example.com"
+                        required
+                    >
+
+                    <label for="signupPassword">Password</label>
+                    <input
+    type="password"
+    id="signupPassword"
+    name="password"
+    placeholder="At least 8 characters"
+    minlength="8"
+    required
+>
+
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        name="confirmPassword"
+                        placeholder="Confirm your password"
+                        required
+                    >
+
+                    <button type="submit">Create Account</button>
+
+                    <p id="signupError"></p>
+
+                </form>
+
+                <p class="auth-switch">
+                    Already have an account?
+                    <a href="Login.html">Sign In</a>
+                </p>
+
+            </div>
+
+        </div>
+
+        <!-- ============ RIGHT: MOTIVATIONAL PANEL ============ -->
+        <div class="auth-hero-side">
+
+            <div class="auth-hero-content">
+
+                <p class="auth-hero-label">JOIN CLASSHUB</p>
+
+                <h2 class="auth-hero-title">
+                    Your classroom<br>
+                    deserves better.
+                </h2>
+
+                <p class="auth-hero-text">
+                    Join instructors who are already saving hours
+                    every week with a single, organized dashboard.
+                </p>
+
+                <ul class="auth-hero-list">
+                    <li>Free for instructors</li>
+                    <li>No setup required</li>
+                    <li>Everything in one place</li>
+                </ul>
+
+            </div>
+
+            <span class="auth-deco deco-1"></span>
+            <span class="auth-deco deco-2"></span>
+            <span class="auth-deco deco-3"></span>
+
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/dark.js"></script>
+</body>
+</html>

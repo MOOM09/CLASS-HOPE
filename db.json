@@ -1,0 +1,517 @@
+{
+  "instructors": [
+    {
+      "id": "inst_01",
+      "email": "sondos@gmail.com",
+      "username": "sondos",
+      "password": "password_123",
+      "students": [
+        {
+          "id": "stu_001",
+          "name": "Ahmad Khalid",
+          "studentId": "S-1001",
+          "email": "ahmad@uni.com",
+          "department": "CS",
+          "attendance": {
+            "status": "present",
+            "present": 0,
+            "absent": 0,
+            "late": 0,
+            "lastAttendanceDate": ""
+          },
+          "archived": false,
+          "exams": [],
+          "assignments": [],
+          "quizzes": []
+        },
+        {
+          "id": "stu_002",
+          "name": "Sara Majed",
+          "studentId": "S-1002",
+          "email": "sara@uni.com",
+          "department": "IT",
+          "attendance": {
+            "status": "late",
+            "present": 0,
+            "absent": 0,
+            "late": 0,
+            "lastAttendanceDate": ""
+          },
+          "archived": false,
+          "exams": [],
+          "assignments": [],
+          "quizzes": []
+        },
+        {
+          "id": "stu_003",
+          "name": "Omar Tariq",
+          "studentId": "S-1003",
+          "email": "omar@uni.com",
+          "department": "Business",
+          "attendance": {
+            "status": "absent",
+            "present": 0,
+            "absent": 0,
+            "late": 0,
+            "lastAttendanceDate": ""
+          },
+          "archived": true,
+          "exams": [],
+          "assignments": [],
+          "quizzes": []
+        },
+        {
+          "id": "stu_004",
+          "name": "Layla Hassan",
+          "studentId": "S-1004",
+          "email": "layla@uni.com",
+          "department": "CS",
+          "attendance": {
+            "status": "present",
+            "present": 0,
+            "absent": 0,
+            "late": 0,
+            "lastAttendanceDate": ""
+          },
+          "archived": false,
+          "exams": [],
+          "assignments": [],
+          "quizzes": []
+        }
+      ]
+    },
+    {
+      "id": "inst_02",
+      "email": "admin@email.com",
+      "username": "gdg_admin",
+      "password": "password_456",
+      "students": [
+        {
+          "id": "stu_101",
+          "name": "Yousef Ali",
+          "studentId": "S-2001",
+          "email": "yousef@uni.com",
+          "department": "IT",
+          "attendance": {
+            "status": "present",
+            "present": 0,
+            "absent": 0,
+            "late": 0,
+            "lastAttendanceDate": ""
+          },
+          "archived": false,
+          "exams": [],
+          "assignments": [],
+          "quizzes": []
+        },
+        {
+          "id": "stu_102",
+          "name": "Noor Sami",
+          "studentId": "S-2002",
+          "email": "noor@uni.com",
+          "department": "Business",
+          "attendance": {
+            "status": "late",
+            "present": 0,
+            "absent": 0,
+            "late": 0,
+            "lastAttendanceDate": ""
+          },
+          "archived": false,
+          "exams": [],
+          "assignments": [],
+          "quizzes": []
+        }
+      ]
+    },
+    {
+      "id": "IsQFiURoK_Y",
+      "firstName": "Mohammad",
+      "lastName": "Al-Tarifi",
+      "username": "Mohammad",
+      "email": "mo.tarifi2004@gmail.com",
+      "password": "123456789",
+      "students": [
+        {
+          "id": "stu_1791025194215",
+          "name": "Emre Avan",
+          "studentId": "sasa",
+          "email": "mo.tari004@gmail.com",
+          "department": "CS",
+          "attendance": {
+            "status": "present",
+            "present": 2,
+            "absent": 0,
+            "late": 0,
+            "lastAttendanceDate": "2026-10-04"
+          },
+          "archived": false,
+          "exams": [
+            {
+              "id": "ex_1791100391672",
+              "name": "HTML",
+              "score": 80
+            }
+          ],
+          "assignments": [
+            {
+              "id": "as_1791100077207",
+              "name": "HTML",
+              "score": 10
+            },
+            {
+              "id": "as_1791100088537",
+              "name": "CSS.1",
+              "score": 5
+            },
+            {
+              "id": "as_1791100097836",
+              "name": "JAVA",
+              "score": 20
+            },
+            {
+              "id": "as_1791105264255",
+              "name": "HTML2323",
+              "score": 43
+            }
+          ],
+          "quizzes": []
+        },
+        {
+          "id": "stu_1791028899709",
+          "name": "Klaus Dieter Rieck",
+          "studentId": "S-111",
+          "email": "mo.ta@gmail.com",
+          "department": "IT",
+          "attendance": {
+            "status": "present",
+            "present": 2,
+            "absent": 0,
+            "late": 0,
+            "lastAttendanceDate": "2026-10-04"
+          },
+          "archived": false,
+          "exams": [
+            {
+              "id": "ex_1791100424709",
+              "name": "HTML",
+              "score": 87
+            }
+          ],
+          "assignments": [],
+          "quizzes": []
+        },
+        {
+          "id": "stu_1791029090056",
+          "name": "Miladin Ivančević",
+          "studentId": "S-124",
+          "email": "tarifi2004@gmail.com",
+          "department": "CS",
+          "attendance": {
+            "status": "present",
+            "present": 2,
+            "absent": 0,
+            "late": 0,
+            "lastAttendanceDate": "2026-10-04"
+          },
+          "archived": false,
+          "exams": [
+            {
+              "id": "ex_1791100456094",
+              "name": "HTML",
+              "score": 67
+            }
+          ],
+          "assignments": [],
+          "quizzes": []
+        },
+        {
+          "id": "stu_1791040728445",
+          "name": "Diane Peters",
+          "studentId": "3261",
+          "email": "m13@gmail.com",
+          "department": "Business",
+          "attendance": {
+            "status": "present",
+            "present": 2,
+            "absent": 0,
+            "late": 0,
+            "lastAttendanceDate": "2026-10-04"
+          },
+          "archived": false,
+          "exams": [
+            {
+              "id": "ex_1791129135688",
+              "name": "HTML",
+              "score": 96
+            }
+          ],
+          "assignments": [],
+          "quizzes": []
+        },
+        {
+          "id": "stu_1791099112252",
+          "name": "Adelheid Moreau",
+          "studentId": "326315",
+          "email": "reqqerq@gmail.com",
+          "department": "Business",
+          "attendance": {
+            "status": "present",
+            "present": 1,
+            "absent": 0,
+            "late": 0,
+            "lastAttendanceDate": "2026-10-04"
+          },
+          "archived": false,
+          "exams": [
+            {
+              "id": "ex_1791129156732",
+              "name": "HTML",
+              "score": 65
+            }
+          ],
+          "assignments": [],
+          "quizzes": []
+        },
+        {
+          "id": "stu_1791100026560",
+          "name": "Helena Robledo",
+          "studentId": "326145",
+          "email": "mo004@gmail.com",
+          "department": "IT",
+          "attendance": {
+            "status": "present",
+            "present": 1,
+            "absent": 0,
+            "late": 0,
+            "lastAttendanceDate": "2026-10-04"
+          },
+          "archived": false,
+          "exams": [],
+          "assignments": [],
+          "quizzes": []
+        },
+        {
+          "id": "stu_1791104990225",
+          "name": "Jens Bernard",
+          "studentId": "32000222",
+          "email": "mo.tarifi@gmail.com",
+          "department": "IT",
+          "attendance": {
+            "status": "present",
+            "present": 1,
+            "absent": 0,
+            "late": 0,
+            "lastAttendanceDate": "2026-10-04"
+          },
+          "archived": false,
+          "exams": [],
+          "assignments": [],
+          "quizzes": []
+        },
+        {
+          "id": "stu_1791129272568",
+          "name": "Ljuba Španović",
+          "studentId": "234",
+          "email": "LU@gmail.com",
+          "department": "IT",
+          "attendance": {
+            "status": "absent",
+            "present": 0,
+            "absent": 1,
+            "late": 0,
+            "lastAttendanceDate": "2026-10-04"
+          },
+          "archived": false,
+          "exams": [],
+          "assignments": [],
+          "quizzes": []
+        }
+      ],
+      "quizzes": [
+        {
+          "id": "quiz_1791028995204",
+          "title": "HTML",
+          "questions": [
+            {
+              "id": "q_1791100141527_ljv4",
+              "text": "WHAT'S YOUR NAME",
+              "options": [
+                "MO",
+                "messi",
+                "qrqrwrew"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        },
+        {
+          "id": "quiz_1791100220913",
+          "title": "SPORT11",
+          "questions": [
+            {
+              "id": "q_1791105226669_0bkr",
+              "text": "WHO IS WINNER IN WORLD CUP 1934",
+              "options": [
+                "SPAIN",
+                "BRAZIL",
+                "ITALY"
+              ],
+              "correctOptionIndex": 2
+            }
+          ]
+        },
+        {
+          "id": "quiz_1791100347518",
+          "title": "programming",
+          "questions": [
+            {
+              "id": "q_1791100347518_98cl",
+              "text": "which language called markup language",
+              "options": [
+                "java",
+                "c++",
+                "HTML"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "IYMta7ZBFGw",
+      "firstName": "adel",
+      "lastName": "samer",
+      "username": "adel",
+      "email": "samera@gmail.com",
+      "password": "987",
+      "students": []
+    },
+    {
+      "firstName": "LEONEL",
+      "lastName": "RONALDO",
+      "username": "LEONEL",
+      "email": "tarifi@gmail.com",
+      "password": "987",
+      "students": [
+        {
+          "id": "stu_1791040918971",
+          "name": "messi",
+          "studentId": "3261",
+          "email": "sdgd@gmail.com",
+          "department": "IT",
+          "attendance": {
+            "status": "present",
+            "present": 1,
+            "absent": 0,
+            "late": 0,
+            "lastAttendanceDate": "2026-10-03"
+          },
+          "archived": false,
+          "exams": [
+            {
+              "id": "ex_1791040981419",
+              "name": "messi",
+              "score": 5
+            }
+          ],
+          "assignments": [],
+          "quizzes": []
+        },
+        {
+          "id": "stu_1791050556854",
+          "name": "loza",
+          "studentId": "s32222",
+          "email": "mo.544@gmail.com",
+          "department": "Business",
+          "attendance": {
+            "status": "late",
+            "present": 0,
+            "absent": 0,
+            "late": 1,
+            "lastAttendanceDate": "2026-10-03"
+          },
+          "archived": false,
+          "exams": [],
+          "assignments": [],
+          "quizzes": []
+        }
+      ],
+      "id": "RFs86RchVD4",
+      "quizzes": [
+        {
+          "id": "quiz_1791041003985",
+          "title": "a",
+          "questions": [
+            {
+              "id": "q_1791041003985_73uv",
+              "text": "adsdf",
+              "options": [
+                "dagd",
+                "gaf",
+                "af"
+              ],
+              "correctOptionIndex": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "firstName": "ashraf",
+      "lastName": "hakim",
+      "username": "ashraf",
+      "email": "slalmassa@gmail.com",
+      "password": "456",
+      "students": [],
+      "id": "t_d5XStxPBI"
+    },
+    {
+      "firstName": "adel",
+      "lastName": "hasan",
+      "username": "adel",
+      "email": "adelhasan123@gmail.com",
+      "password": "adelhasan",
+      "students": [],
+      "id": "VEqLFI5ej-Y"
+    },
+    {
+      "firstName": "mohammad",
+      "lastName": "omar",
+      "username": "mohammad",
+      "email": "mo.tarifi2005@gmail.com",
+      "password": "123456789",
+      "students": [],
+      "id": "8VV5ixonQNA"
+    },
+    {
+      "firstName": "omar",
+      "lastName": "saleh",
+      "username": "omar",
+      "email": "omar@gmail.com",
+      "password": "123456789",
+      "students": [],
+      "id": "nTNBrkNxocE"
+    },
+    {
+      "firstName": "sa",
+      "lastName": "asd",
+      "username": "sa",
+      "email": "3123@gmail.com",
+      "password": "Jojo@2011#2004",
+      "students": [],
+      "id": "ioP3mSQkIFs"
+    },
+    {
+      "firstName": "omar",
+      "lastName": "issa",
+      "username": "omar",
+      "email": "omis@gmail.com",
+      "password": "Jojo@2011#2004",
+      "students": [],
+      "id": "ujYsJ5zlslA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

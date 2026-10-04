@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Instructor Dashboard </title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+    <nav class="dashboard-navbar">
+
+        <!-- Burger Button -->
+        <button id="menuBtn" class="menu-btn">
+            ☰
+        </button>
+
+        <!-- University Logo + Name -->
+        <div class="university-brand">
+
+            <img src="photo/logo.jpg" alt="University Logo">
+
+            <span>
+                CLASS HUB
+            </span>
+
+        </div>
+
+
+        <!-- Profile -->
+        <div class="profile-container">
+
+            <button id="profileBtn" class="profile-btn">
+
+                <img src="photo/profile.jpg" alt="Profile">
+
+            </button>
+
+            <!-- Profile Menu -->
+            <div id="profileMenu" class="profile-menu">
+
+                <button id="darkModeBtn">
+                    🌙
+                </button>
+
+                <button id="logoutBtn">
+                    Sign Out
+                </button>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- ================= SIDEBAR ================= -->
+<aside id="sidebar" class="sidebar">
+    <nav class="sidebar-links">
+
+        <a href="dashboard.html" class="active">
+            <span class="nav-icon"></span>
+            Dashboard
+        </a>
+
+        <a href="Student.html">
+            <span class="nav-icon"></span>
+            Students
+        </a>
+
+        <a href="exams.html">
+            <span class="nav-icon"></span>
+            Exams
+        </a>
+
+        <a href="quizzes.html">
+            <span class="nav-icon"></span>
+            Quizzes
+        </a>
+
+        <a href="assigment.html">
+            <span class="nav-icon"></span>
+            Assignments
+        </a>
+
+        <a href="atend.html">
+            <span class="nav-icon"></span>
+            Attendance
+        </a>
+
+    </nav>
+</aside>
+
+
+    <!-- ================= MAIN CONTENT ================= -->
+<main class="dashboard-content">
+
+    <!-- Welcome Header -->
+    <div class="page-head">
+        <div>
+            <p class="welcome-label">WELCOME BACK</p>
+            <h1>Hello, <span id="welcome-name">Instructor</span> 👋</h1>
+            <p class="welcome-sub" id="today-date">Loading date...</p>
+        </div>
+    </div>
+
+    <!-- ================= STATS GRID ================= -->
+    <section class="stats-grid">
+        <div class="stat-card">
+            <div class="stat-icon">👥</div>
+            <h3 class="stat-title">Students</h3>
+            <p class="stat-value" id="stat-students">0</p>
+            <p class="stat-meta" id="stat-students-meta">0 active · 0 archived</p>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">📝</div>
+            <h3 class="stat-title">Exams</h3>
+            <p class="stat-value" id="stat-exams">0</p>
+            <p class="stat-meta" id="stat-exams-meta">Average: 0</p>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">❓</div>
+            <h3 class="stat-title">Quizzes</h3>
+            <p class="stat-value" id="stat-quizzes">0</p>
+            <p class="stat-meta" id="stat-quizzes-meta">Average: 0</p>
+        </div>
+        <div class="stat-card">
+            <div class="stat-icon">📄</div>
+            <h3 class="stat-title">Assignments</h3>
+            <p class="stat-value" id="stat-assignments">0</p>
+            <p class="stat-meta" id="stat-assignments-meta">Average: 0</p>
+        </div>
+    </section>
+
+    <!-- ================= ROW: DEPARTMENT CHART + ATTENDANCE ================= -->
+    <section class="dashboard-row">
+        <div class="chart-card">
+            <div class="chart-head">
+                <h2>Students by Department</h2>
+                <p class="chart-sub">Distribution of your active students</p>
+            </div>
+            <div class="chart-body">
+                <canvas id="departmentChart"></canvas>
+                <p class="chart-empty" id="chart-empty" hidden>No students to display.</p>
+            </div>
+        </div>
+
+        <div class="attendance-card">
+            <div class="attendance-head">
+                <h3>Attendance Overview</h3>
+                <p>Class performance this term</p>
+            </div>
+            <p class="attendance-big" id="attendance-rate">0.0%</p>
+            <div class="progress-track">
+                <div class="progress-bar" id="attendance-bar"></div>
+            </div>
+            <div class="attendance-stats">
+                <div class="att-stat present">
+                    <span class="att-num" id="att-present">0</span>
+                    <span class="att-label">Present</span>
+                </div>
+                <div class="att-stat absent">
+                    <span class="att-num" id="att-absent">0</span>
+                    <span class="att-label">Absent</span>
+                </div>
+                <div class="att-stat late">
+                    <span class="att-num" id="att-late">0</span>
+                    <span class="att-label">Late</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CHART 1: STUDENT GRADES ================= -->
+    <section class="chart-card chart-full">
+        <div class="chart-head">
+            <h2>📊 Student Grades</h2>
+            <p class="chart-sub">Average score per student (Exams + Assignments)</p>
+        </div>
+        <div class="chart-body-lg">
+            <canvas id="gradesChart"></canvas>
+            <p class="chart-empty" id="grades-empty" hidden>No grades yet.</p>
+        </div>
+    </section>
+
+    <!-- ================= CHART 2: STUDENT ATTENDANCE ================= -->
+    <section class="chart-card chart-full">
+        <div class="chart-head">
+            <h2>📅 Student Attendance</h2>
+            <p class="chart-sub">Present · Late · Absent per student</p>
+        </div>
+        <div class="chart-body-lg">
+            <canvas id="attendanceChart"></canvas>
+            <p class="chart-empty" id="attendance-empty" hidden>No attendance data yet.</p>
+        </div>
+    </section>
+
+    <!-- ================= ROW: TOP PERFORMERS + QUICK ACTIONS ================= -->
+    <section class="dashboard-row">
+        <div class="panel-card">
+            <div class="card-head">
+                <h3>Top Performers</h3>
+                <p>Highest average scores in your class</p>
+            </div>
+            <ul class="top-list" id="top-students-list">
+                <li class="empty-item">No scores yet</li>
+            </ul>
+        </div>
+
+        <div class="panel-card">
+            <div class="card-head">
+                <h3>Quick Actions</h3>
+                <p>Jump to common tasks</p>
+            </div>
+            <div class="quick-grid">
+                <a href="Student.html" class="quick-btn">
+                    <span class="quick-icon">👥</span><span>Students</span>
+                </a>
+                <a href="exams.html" class="quick-btn">
+                    <span class="quick-icon">📝</span><span>Add Exam</span>
+                </a>
+                <a href="quizzes.html" class="quick-btn">
+                    <span class="quick-icon">❓</span><span>Create Quiz</span>
+                </a>
+                <a href="atend.html" class="quick-btn">
+                    <span class="quick-icon">📊</span><span>Attendance</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= ROW: SCORE DISTRIBUTION + CLASS PERFORMANCE ================= -->
+    <section class="dashboard-row">
+        <div class="chart-card">
+            <div class="chart-head">
+                <h2>🎯 Score Distribution</h2>
+                <p class="chart-sub">Students by grade category</p>
+            </div>
+            <div class="chart-body">
+                <canvas id="distributionChart"></canvas>
+                <p class="chart-empty" id="distribution-empty" hidden>No data yet.</p>
+            </div>
+        </div>
+
+        <div class="chart-card">
+            <div class="chart-head">
+                <h2>⚡ Class Performance</h2>
+                <p class="chart-sub">Overall strength across categories</p>
+            </div>
+            <div class="chart-body">
+                <canvas id="performanceChart"></canvas>
+                <p class="chart-empty" id="performance-empty" hidden>No data yet.</p>
+            </div>
+        </div>
+    </section>
+
+</main>
+    <!-- ================= JAVASCRIPT ================= -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="js/profile-menu.js"></script>
+    <script src="js/DASHBORD.js"></script>
+    <script src="js/dark.js"></script>
+    <script src="js/dashboard-stats.js"></script>
+</body>
+
+</body>
+
+</html>

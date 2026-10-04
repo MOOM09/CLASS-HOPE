@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignments | CLASS HUB</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/assigment.css">
+</head>
+
+<body>
+    <div class="app" id="app">
+
+        <!-- ================= TOPBAR ================= -->
+        <header class="topbar">
+            <button id="menu-toggle" class="menu-btn" aria-label="Toggle menu">
+                ☰
+            </button>
+
+            <div class="university-brand">
+                <img src="photo/logo.jpg" alt="University Logo">
+                <span>CLASS HUB</span>
+            </div>
+
+            <div class="profile-container">
+    <button id="profileBtn" class="profile-btn" aria-label="Profile">
+        <img src="photo/profile.jpg" alt="Profile">
+    </button>
+    <div id="profileMenu" class="profile-menu">
+        <button id="darkModeBtn">🌙</button>
+        <button id="logoutBtn">Sign Out</button>
+    </div>
+</div>
+        </header>
+
+        <!-- ================= SHELL ================= -->
+        <div class="shell">
+
+            <aside class="sidebar">
+                <nav>
+                    <a href="dashboard.html">
+                        <span class="nav-icon"></span>
+                        Dashboard
+                    </a>
+                    <a href="Student.html">
+                        <span class="nav-icon"></span>
+                        Students
+                    </a>
+                   <a href="exams.html"><span class="nav-icon"></span>Exams</a>
+                    <a href="quizzes.html"><span class="nav-icon"></span>Quizzes</a>
+                    <a href="assigment.html" class="current">
+                        <span class="nav-icon"></span>
+                        Assignments
+                    </a>
+                    <a href="atend.html">
+                        <span class="nav-icon"></span>
+                        Attendance
+                    </a>
+                </nav>
+            </aside>
+
+            <main class="content">
+                <div class="page-head">
+                    <h1>Assignments</h1>
+                    <button id="openAddPopup" class="btn primary">
+                        + Add Assignment
+                    </button>
+                </div>
+
+                <div class="filters">
+                    <div class="search-box">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <circle cx="11" cy="11" r="7" />
+                            <path d="m20 20-3.5-3.5" />
+                        </svg>
+                        <input
+                            type="search"
+                            id="searchInput"
+                            placeholder="Search assignments..."
+                            aria-label="Search assignments"
+                        />
+                    </div>
+                </div>
+
+                <section class="panel">
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="width: 60px;">#</th>
+                                    <th>Assignment</th>
+                                    <th style="width: 100px;">Score</th>
+                                    <th style="width: 130px;">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="assignmentsList"></tbody>
+                        </table>
+                        <p id="empty" class="empty" hidden>No assignments to show.</p>
+                    </div>
+
+                    <div class="panel-foot">
+                        <span class="muted" id="assignmentCount">
+                            Showing 0 assignments
+                        </span>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+    </div>
+
+    <!-- ================= ADD POPUP ================= -->
+    <div id="addPopup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>Add Assignment</h2>
+                <button class="close-button" id="closeAddPopup" aria-label="Close">×</button>
+            </div>
+
+            <label for="assignmentName">Assignment Name</label>
+            <input
+                type="text"
+                id="assignmentName"
+                placeholder="Enter assignment name"
+            >
+
+            <label for="assignmentScore">Score</label>
+            <input
+                type="number"
+                id="assignmentScore"
+                placeholder="Enter score"
+            >
+
+            <div class="popup-buttons">
+                <button class="cancel-button" id="cancelAdd">Cancel</button>
+                <button class="primary-button" id="addAssignment">Add Assignment</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ================= EDIT POPUP ================= -->
+    <div id="editPopup" class="popup">
+        <div class="popup-content">
+            <div class="popup-header">
+                <h2>Edit Assignment</h2>
+                <button class="close-button" id="closeEditPopup" aria-label="Close">×</button>
+            </div>
+
+            <label for="editAssignmentName">Assignment Name</label>
+            <input
+                type="text"
+                id="editAssignmentName"
+                placeholder="Assignment Name"
+            >
+
+            <label for="editAssignmentScore">Score</label>
+            <input
+                type="number"
+                id="editAssignmentScore"
+                placeholder="Score"
+            >
+
+            <div class="popup-buttons">
+                <button class="cancel-button" id="cancelEdit">Cancel</button>
+                <button class="primary-button" id="saveEdit">Save Changes</button>
+            </div>
+        </div>
+    </div>
+<script src="js/profile-menu.js"></script> 
+    <script src="js/assigment.js"></script>
+    <script src="js/dark.js"></script>
+    <script>
+(function () {
+    const btn = document.getElementById("menu-toggle");
+    const app = document.getElementById("app");
+    if (btn && app) {
+        btn.onclick = function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            app.classList.toggle("nav-toggled");
+        };
+    }
+})();
+</script>
+</body>
+</html>

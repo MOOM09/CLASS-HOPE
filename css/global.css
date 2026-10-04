@@ -1,0 +1,208 @@
+/* ==========================================================================
+   Global Variables & Reset
+   ========================================================================== */
+:root {
+    /* الألوان الأساسية المستخرجة من التصميم */
+    --primary-color: #6a1b29; /* اللون العنابي الداكن للأزرار والعناوين */
+    --bg-color: #fcf7f2; /* لون الخلفية السكري الفاتح */
+    --card-bg: #ffffff; /* لون خلفية الكروت والفورم (أبيض) */
+    --text-main: #333333; /* لون النصوص الأساسية */
+    --text-muted: #666666; /* لون النصوص الفرعية */
+    --border-color: #e0d8d0; /* لون الحدود (Borders) */
+    
+    /* الخطوط - يُفضل استخدام خط مشابه للتصميم مثل Roboto أو خط Serif للعناوين */
+    --font-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-serif: 'Georgia', 'Times New Roman', Times, serif; /* للعناوين التي تبدو كلاسيكية */
+}
+
+/* Reset الأساسي لإزالة الهوامش الافتراضية من المتصفح */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    font-family: var(--font-sans);
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==========================================================================
+   Typography (النصوص والعناوين)
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+    transition: opacity 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.8;
+}
+
+/* ==========================================================================
+   Global Buttons (الأزرار العامة)
+   ========================================================================== */
+button, .btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px; /* زوايا دائرية بسيطة كما في التصميم */
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+button:hover, .btn-primary:hover {
+    background-color: #521520; /* لون أغمق قليلاً عند التمرير */
+}
+
+button:active, .btn-primary:active {
+    transform: scale(0.98); /* تأثير ضغطة بسيطة */
+}
+
+/* ==========================================================================
+   Layout Helpers (مساعدات التخطيط)
+   ========================================================================== */
+main {
+    flex: 1; /* لجعل المحتوى يأخذ المساحة المتبقية إذا كان المحتوى قليلاً */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* خلفية الدائرة العنابية في الزاوية العلوية اليسرى (موجودة في صفحة التسجيل والدخول) */
+.bg-shape-top-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background-color: var(--primary-color);
+    border-bottom-right-radius: 100%;
+    z-index: -1; /* لتبقى في الخلفية */
+}
+
+@media (max-width: 768px) {
+    main {
+        padding: 1.5rem 1rem;
+    }
+    h1 { font-size: 1.8rem; }
+    h2 { font-size: 1.5rem; }
+    .bg-shape-top-left {
+        width: 180px;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    main { padding: 1rem; }
+    h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.3rem; }
+    .bg-shape-top-left {
+        width: 120px;
+        height: 120px;
+    }
+    button, .btn-primary {
+        padding: 9px 18px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+/* ================= DARK MODE ================= */
+
+body.dark-mode {
+    --bg-color: #1e1e1e;
+    --card-bg: #2b2b2b;
+    --text-main: #f5f5f5;
+    --text-muted: #cfcfcf;
+    --border-color: #444444;
+    --primary-color: #a8324a;
+}
+body.dark-mode .nav-icon {
+    background: transparent;
+    border-color: var(--text-main);
+}
+
+body.dark-mode .nav-icon::after {
+    background: var(--text-main);
+}
+
+body.dark-mode .sidebar-links a.active .nav-icon,
+body.dark-mode .sidebar a.current .nav-icon {
+    border-color: #fff;
+}
+
+body.dark-mode .sidebar-links a.active .nav-icon::after,
+body.dark-mode .sidebar a.current .nav-icon::after {
+    background: #fff;
+}
+
+/* ================= PROFILE MENU (مشترك) ================= */
+.profile-menu {
+    display: none;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 170px;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    z-index: 1100;
+}
+
+.profile-menu.open {
+    display: block;
+}
+
+.profile-menu button {
+    width: 100%;
+    margin-bottom: 5px;
+    background: transparent;
+    color: var(--text-main);
+    border: 1px solid var(--border-color);
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    display: block;
+    text-align: center;
+}
+
+.profile-menu button:hover {
+    background-color: var(--bg-color);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.profile-menu button:last-child {
+    margin-bottom: 0;
+}

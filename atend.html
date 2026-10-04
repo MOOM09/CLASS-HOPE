@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance | CLASS HUB</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/atend.css">
+</head>
+
+<body>
+    <div class="app" id="app">
+
+        <!-- ================= TOPBAR ================= -->
+        <header class="topbar">
+            <button id="menu-toggle" class="menu-btn" aria-label="Toggle menu">
+                ☰
+            </button>
+
+            <div class="university-brand">
+                <img src="photo/logo.jpg" alt="University Logo">
+                <span>CLASS HUB</span>
+            </div>
+
+           <div class="profile-container">
+    <button id="profileBtn" class="profile-btn" aria-label="Profile">
+        <img src="photo/profile.jpg" alt="Profile">
+    </button>
+    <div id="profileMenu" class="profile-menu">
+        <button id="darkModeBtn">🌙</button>
+        <button id="logoutBtn">Sign Out</button>
+    </div>
+</div>
+        </header>
+
+        <!-- ================= SHELL ================= -->
+        <div class="shell">
+
+            <!-- Sidebar -->
+            <aside class="sidebar">
+    <nav>
+        <a href="dashboard.html">
+            <span class="nav-icon"></span>
+            Dashboard
+        </a>
+        <a href="Student.html">
+            <span class="nav-icon"></span>
+            Students
+        </a>
+       <a href="exams.html"><span class="nav-icon"></span>Exams</a>
+<a href="quizzes.html"><span class="nav-icon"></span>Quizzes</a>
+<a href="assigment.html"><span class="nav-icon"></span>Assignments</a>
+
+        <a href="atend.html" class="current">
+            <span class="nav-icon"></span>
+            Attendance
+        </a>
+    </nav>
+</aside>
+
+            <!-- Main Content -->
+            <main class="content">
+                <div class="page-head">
+                    <h1>Attendance</h1>
+                    <button id="save-attendance-btn" class="btn primary">
+                        Save Attendance
+                    </button>
+                </div>
+
+                <div class="filters">
+                    <div class="search-box">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                             stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <circle cx="11" cy="11" r="7" />
+                            <path d="m20 20-3.5-3.5" />
+                        </svg>
+                        <input
+                            id="search"
+                            type="search"
+                            placeholder="Search student..."
+                            aria-label="Search students"
+                        />
+                    </div>
+                    <button id="mark-all-present" class="btn">
+                        Mark all present
+                    </button>
+                </div>
+
+                <section class="panel">
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="width: 60px;">#</th>
+                                    <th>Student</th>
+                                    <th>Attendance</th>
+                                    <th style="width: 90px;">Present</th>
+                                    <th style="width: 90px;">Absent</th>
+                                    <th style="width: 90px;">Late</th>
+                                </tr>
+                            </thead>
+                            <tbody id="student-table-body"></tbody>
+                        </table>
+                        <p id="empty" class="empty" hidden>No students to show.</p>
+                    </div>
+
+                    <div class="panel-foot">
+                        <span class="muted">
+                            Class Average:
+                            <strong id="class-average-display" class="class-average">0.0%</strong>
+                        </span>
+                        <span class="muted" id="showing"></span>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+    </div>
+<script src="js/profile-menu.js"></script> 
+    <script src="js/atend.js"></script>
+    <script src="js/dark.js"></script>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exams | CLASS HUB</title>
+
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/grades.css">
+</head>
+
+<body>
+    <div class="app" id="app">
+
+        <!-- ================= TOPBAR ================= -->
+        <header class="topbar">
+            <button id="menu-toggle" class="menu-btn" aria-label="Toggle menu">
+                ☰
+            </button>
+
+            <div class="university-brand">
+                <img src="photo/logo.jpg" alt="University Logo">
+                <span>CLASS HUB</span>
+            </div>
+
+            <div class="profile-container">
+    <button id="profileBtn" class="profile-btn" aria-label="Profile">
+        <img src="photo/profile.jpg" alt="Profile">
+    </button>
+    <div id="profileMenu" class="profile-menu">
+        <button id="darkModeBtn">🌙</button>
+        <button id="logoutBtn">Sign Out</button>
+    </div>
+</div>
+        </header>
+
+        <!-- ================= SHELL ================= -->
+        <div class="shell">
+
+          <aside class="sidebar">
+    <nav>
+        <a href="dashboard.html">
+            <span class="nav-icon"></span>
+            Dashboard
+        </a>
+        <a href="Student.html">
+            <span class="nav-icon"></span>
+            Students
+        </a>
+        <a href="exams.html" class="current">
+            <span class="nav-icon"></span>
+            Exams
+        </a>
+        <a href="quizzes.html">
+            <span class="nav-icon"></span>
+            Quizzes
+        </a>
+        <a href="assigment.html">
+            <span class="nav-icon"></span>
+            Assignments
+        </a>
+        <a href="atend.html">
+            <span class="nav-icon"></span>
+            Attendance
+        </a>
+    </nav>
+</aside>
+
+            <main class="content">
+                <div class="page-head">
+                    <h1>Exams</h1>
+                </div>
+
+                <!-- Add Exam Form -->
+                <form id="exam-form" class="inline-form">
+                    <input type="text" id="exam-name-input" placeholder="Exam Name" required>
+                    <input type="number" id="exam-score-input" placeholder="Score" required>
+                    <input type="text" id="student-id-input" placeholder="Student ID (e.g., stu_001)" required>
+                    <button type="submit" class="btn primary">+ Add Exam</button>
+                </form>
+
+                <section class="panel">
+                    <div class="table-wrap">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th style="width: 60px;">#</th>
+                                    <th>Title</th>
+                                    <th style="width: 100px;">Score</th>
+                                    <th>Student</th>
+                                    <th style="width: 130px;">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody id="exam-tbody"></tbody>
+                        </table>
+                        <p id="empty" class="empty" hidden>No exams to show.</p>
+                    </div>
+                    <div class="panel-foot">
+                        <span class="muted" id="exam-count">Showing 0 exams</span>
+                    </div>
+                </section>
+            </main>
+
+        </div>
+    </div>
+<script src="js/profile-menu.js"></script> 
+    <script src="js/exams.js"></script>
+    <script src="js/dark.js"></script>
+</body>
+</html>
