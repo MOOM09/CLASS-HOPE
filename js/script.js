@@ -1,4 +1,4 @@
-// ============ login section ============
+
 const loginForm = document.getElementById("loginForm");
 const signupForm = document.getElementById("signupForm");
 
@@ -38,7 +38,6 @@ if (loginForm) {
     });
 }
 
-// ============ signup section ============
 if (signupForm) {
     const firstName = document.getElementById("firstName");
     const lastName = document.getElementById("lastName");
@@ -56,7 +55,7 @@ if (signupForm) {
         const getPassword = signupPassword.value;
         const getConfirmPassword = confirmPassword.value;
 
-        // ---- Validation ----
+      
         if (getFirstName === "") {
             signupError.textContent = "First name is empty";
             return;
@@ -83,7 +82,7 @@ if (signupForm) {
         }
 
         try {
-            // ---- Check if email already exists ----
+           
             const response = await fetch("http://localhost:3000/instructors");
             const getData = await response.json();
 
@@ -95,7 +94,7 @@ if (signupForm) {
                 return;
             }
 
-            // ---- Create new instructor ----
+       
             const addNewId = await fetch("http://localhost:3000/instructors", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

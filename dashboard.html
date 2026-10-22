@@ -107,11 +107,11 @@
         <div>
             <p class="welcome-label">WELCOME BACK</p>
             <h1>Hello, <span id="welcome-name">Instructor</span> 👋</h1>
-            <p class="welcome-sub" id="today-date">Loading date...</p>
+            <p class="welcome-sub">Here's a quick overview of your classroom.</p>
         </div>
     </div>
 
-    <!-- ================= STATS GRID ================= -->
+    <!-- Stats Grid -->
     <section class="stats-grid">
         <div class="stat-card">
             <div class="stat-icon">👥</div>
@@ -139,8 +139,8 @@
         </div>
     </section>
 
-    <!-- ================= ROW: DEPARTMENT CHART + ATTENDANCE ================= -->
-    <section class="dashboard-row">
+    <!-- Chart Section -->
+    <section class="chart-section">
         <div class="chart-card">
             <div class="chart-head">
                 <h2>Students by Department</h2>
@@ -149,114 +149,6 @@
             <div class="chart-body">
                 <canvas id="departmentChart"></canvas>
                 <p class="chart-empty" id="chart-empty" hidden>No students to display.</p>
-            </div>
-        </div>
-
-        <div class="attendance-card">
-            <div class="attendance-head">
-                <h3>Attendance Overview</h3>
-                <p>Class performance this term</p>
-            </div>
-            <p class="attendance-big" id="attendance-rate">0.0%</p>
-            <div class="progress-track">
-                <div class="progress-bar" id="attendance-bar"></div>
-            </div>
-            <div class="attendance-stats">
-                <div class="att-stat present">
-                    <span class="att-num" id="att-present">0</span>
-                    <span class="att-label">Present</span>
-                </div>
-                <div class="att-stat absent">
-                    <span class="att-num" id="att-absent">0</span>
-                    <span class="att-label">Absent</span>
-                </div>
-                <div class="att-stat late">
-                    <span class="att-num" id="att-late">0</span>
-                    <span class="att-label">Late</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= CHART 1: STUDENT GRADES ================= -->
-    <section class="chart-card chart-full">
-        <div class="chart-head">
-            <h2>📊 Student Grades</h2>
-            <p class="chart-sub">Average score per student (Exams + Assignments)</p>
-        </div>
-        <div class="chart-body-lg">
-            <canvas id="gradesChart"></canvas>
-            <p class="chart-empty" id="grades-empty" hidden>No grades yet.</p>
-        </div>
-    </section>
-
-    <!-- ================= CHART 2: STUDENT ATTENDANCE ================= -->
-    <section class="chart-card chart-full">
-        <div class="chart-head">
-            <h2>📅 Student Attendance</h2>
-            <p class="chart-sub">Present · Late · Absent per student</p>
-        </div>
-        <div class="chart-body-lg">
-            <canvas id="attendanceChart"></canvas>
-            <p class="chart-empty" id="attendance-empty" hidden>No attendance data yet.</p>
-        </div>
-    </section>
-
-    <!-- ================= ROW: TOP PERFORMERS + QUICK ACTIONS ================= -->
-    <section class="dashboard-row">
-        <div class="panel-card">
-            <div class="card-head">
-                <h3>Top Performers</h3>
-                <p>Highest average scores in your class</p>
-            </div>
-            <ul class="top-list" id="top-students-list">
-                <li class="empty-item">No scores yet</li>
-            </ul>
-        </div>
-
-        <div class="panel-card">
-            <div class="card-head">
-                <h3>Quick Actions</h3>
-                <p>Jump to common tasks</p>
-            </div>
-            <div class="quick-grid">
-                <a href="Student.html" class="quick-btn">
-                    <span class="quick-icon">👥</span><span>Students</span>
-                </a>
-                <a href="exams.html" class="quick-btn">
-                    <span class="quick-icon">📝</span><span>Add Exam</span>
-                </a>
-                <a href="quizzes.html" class="quick-btn">
-                    <span class="quick-icon">❓</span><span>Create Quiz</span>
-                </a>
-                <a href="atend.html" class="quick-btn">
-                    <span class="quick-icon">📊</span><span>Attendance</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ================= ROW: SCORE DISTRIBUTION + CLASS PERFORMANCE ================= -->
-    <section class="dashboard-row">
-        <div class="chart-card">
-            <div class="chart-head">
-                <h2>🎯 Score Distribution</h2>
-                <p class="chart-sub">Students by grade category</p>
-            </div>
-            <div class="chart-body">
-                <canvas id="distributionChart"></canvas>
-                <p class="chart-empty" id="distribution-empty" hidden>No data yet.</p>
-            </div>
-        </div>
-
-        <div class="chart-card">
-            <div class="chart-head">
-                <h2>⚡ Class Performance</h2>
-                <p class="chart-sub">Overall strength across categories</p>
-            </div>
-            <div class="chart-body">
-                <canvas id="performanceChart"></canvas>
-                <p class="chart-empty" id="performance-empty" hidden>No data yet.</p>
             </div>
         </div>
     </section>
